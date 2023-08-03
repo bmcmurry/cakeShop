@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% load static %} {% block styles %}
+<style>
+  body {
+    background-image: url('{% static "images/banana-split.jpg" %}');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+{% endblock %} {% block content %}
+
+<br />
+<div class="row">
+  <div class="col-md-3">
+    <div class="card card-body-">
+      <a class="btn btn-warning" href="{% url 'home' %}"
+        >&#8592; Back to Profile</a
+      >
+      <hr />
+      <h3 style="text-align: center">Account Settings</h3>
+      <hr />
+      <img
+        alt="profile"
+        class="profile-pic"
+        src="{{request.user.customer.profile_pic.url}}"
+      />
+    </div>
+  </div>
+  <div class="col-md-9">
+    <div class="card card-body">
+      <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %} {{form.as_p}}
+        <input
+          class="btn btn-primary"
+          type="submit"
+          name="Update Information"
+        />
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

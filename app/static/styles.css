@@ -1,0 +1,53 @@
+.logo {
+    max-width: 4em;
+}
+
+body {
+  background-color: #ebeff5;
+}
+#total-orders {
+  background-color: #4cb4c7;
+}
+#orders-delivered {
+  background-color: rgb(41, 192, 41);
+}
+#orders-pending {
+  background-color: rgb(234, 147, 48);
+}
+.hello-msg {
+  color: white;
+  padding-left: 1em;
+}
+.hello-msg {
+  font-size: 20px;
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+  
+}
+
+.profile-pic {
+  max-width: 20em;
+  max-height: 20em;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+
+.carousel-item img.d-block.w-100 {
+    max-width: 1110px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: auto;
+  }
+  
+
+.carousel-item img {
+  display: block;
+  margin: 0 auto;
+}
