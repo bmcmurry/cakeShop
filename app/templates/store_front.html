@@ -106,7 +106,11 @@
               {% endcomment %}
               <p class="card-text">{{ product.description }}</p>
               <p class="card-price">${{ product.price }}</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+              <a
+                href="{% url 'create_order' request.user.customer.id %}"
+                class="btn btn-primary"
+                >Add to Cart</a
+              >
             </div>
           </div>
         </div>

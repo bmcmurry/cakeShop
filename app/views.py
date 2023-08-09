@@ -130,7 +130,7 @@ def ProductsPage(request):
 
 @login_required(login_url="login")
 # @customer_login_required
-@user_is_customer
+# @user_is_customer
 # @allowed_users(allowed_roles=["admin"])
 def CustomerPage(request, pk):
     customer = Customer.objects.get(id=pk)
@@ -225,5 +225,7 @@ def DeleteOrder(request, pk):
 
 def StoreFront(request):
     products = Product.objects.all()
-    context = {"products": products}
+    customer = Customer.objects.all()
+    context = {"products": products, "customer": customer}
     return render(request, "store_front.html", context)
+
